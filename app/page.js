@@ -38,7 +38,7 @@ export default function Page() {
 	const [revealed, setRevealed] = useState(false);
 
 	return (
-		<main className="relative flex w-full min-h-[100svh] items-center justify-center p-4">
+		<main className="relative flex w-full min-h-[100svh] items-center justify-center px-4 py-6 overflow-x-hidden">
 			<div
 				className="pointer-events-none absolute inset-0 z-10 animate-confettiLayerFade motion-reduce:hidden"
 				aria-hidden="true"
@@ -62,7 +62,8 @@ export default function Page() {
 				))}
 			</div>
 
-			<section className="relative mx-auto flex min-h-[min(100svh,844px)] w-full max-w-[390px] overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(160deg,rgba(10,12,24,0.94),rgba(12,26,48,0.92))] shadow-screen">
+			<div className="relative flex w-full items-center justify-center">
+				<section className="relative mx-auto flex h-max w-max max-w-[390px] overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(160deg,rgba(10,12,24,0.94),rgba(12,26,48,0.92))] shadow-screen">
 				<div className="pointer-events-none absolute inset-0 z-[1]">
 					<Spotlight
 						translateY={-320}
@@ -172,7 +173,8 @@ export default function Page() {
 						<p className="m-0">באהבה, מאביב ואופיר</p>
 					</div>
 				</div>
-			</section>
+				</section>
+			</div>
 		</main>
 	);
 }
