@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
+import { Spotlight } from "@/components/ui/spotlight-new";
 
 const PALETTE = [
 	"#ff7ac6",
@@ -37,7 +38,7 @@ export default function Page() {
 	const [revealed, setRevealed] = useState(false);
 
 	return (
-		<main className="relative flex min-h-[100svh] items-center justify-center p-4">
+		<main className="relative flex w-full min-h-[100svh] items-center justify-center p-4">
 			<div
 				className="pointer-events-none absolute inset-0 z-10 animate-confettiLayerFade motion-reduce:hidden"
 				aria-hidden="true"
@@ -61,11 +62,19 @@ export default function Page() {
 				))}
 			</div>
 
-			<section className="relative flex min-h-[min(100svh,844px)] w-full max-w-[390px] overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(160deg,rgba(10,12,24,0.94),rgba(12,26,48,0.92))] shadow-screen">
+			<section className="relative mx-auto flex min-h-[min(100svh,844px)] w-full max-w-[390px] overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(160deg,rgba(10,12,24,0.94),rgba(12,26,48,0.92))] shadow-screen">
 				<div className="pointer-events-none absolute inset-0 z-[1]">
-					<span className="spotlight absolute left-[-40px] top-[-60px] h-[420px] w-[220px] max-[420px]:w-[200px] opacity-60 blur-[8px] mix-blend-screen motion-reduce:animate-none" />
-					<span className="spotlight spotlight--two absolute right-[-60px] top-[-40px] h-[420px] w-[220px] max-[420px]:w-[200px] opacity-60 blur-[8px] mix-blend-screen motion-reduce:animate-none" />
-					<span className="spotlight spotlight--three absolute bottom-[-160px] left-[30%] h-[360px] w-[220px] max-[420px]:w-[200px] opacity-60 blur-[8px] mix-blend-screen motion-reduce:animate-none" />
+					<Spotlight
+						translateY={-320}
+						width={520}
+						height={1250}
+						smallWidth={220}
+						duration={8}
+						xOffset={140}
+						gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(255, 214, 231, 0.25) 0, rgba(255, 122, 198, 0.06) 55%, rgba(255, 122, 198, 0) 80%)"
+						gradientSecond="radial-gradient(50% 50% at 50% 50%, rgba(248, 180, 217, 0.22) 0, rgba(255, 122, 198, 0.08) 80%, transparent 100%)"
+						gradientThird="radial-gradient(50% 50% at 50% 50%, rgba(255, 214, 231, 0.18) 0, rgba(255, 122, 198, 0.05) 80%, transparent 100%)"
+					/>
 				</div>
 
 				<div className="relative z-[2] flex flex-col items-center gap-5 p-10 text-center">

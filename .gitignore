@@ -15,3 +15,7 @@
 # local
 .vscode
 .idea
+
+# misc local
+/Or-gift
+schema.json
