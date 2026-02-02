@@ -159,7 +159,7 @@ export default function Page() {
 						</div>
 					)}
 
-					<div className="mt-auto text-[0.95rem] text-white/70">
+					<div className="mt-auto text-[0.95rem] text-white/70 flex">
 						<p className="m-0">באהבה, מאביב ואופיר</p>
 					</div>
 				</div>
